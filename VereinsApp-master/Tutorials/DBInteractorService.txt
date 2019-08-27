@@ -1,0 +1,14 @@
+DBInteractionService:
+Include:
+
+	include_once WP_CONTENT_DIR . '/DBService/DBInteractorService.php';
+	
+Verwenden:
+
+	$myResultSet = DBInteractorService::getInstance()->executeSelectStatement($mySelectStatement);
+	
+Erklärung:
+	
+	DBInteractionService::getInstance() -> returns the Singleton Instance of this class
+	executeSelectStatement -> Method (see class for other methods) 
+	$mySelectStatement -> Select statement as String => z.B.: 'Select * From table;'

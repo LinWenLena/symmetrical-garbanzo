@@ -1,0 +1,407 @@
+/*
+	Theme Name: VereinsApp
+	Theme URI: http://mircobaseniak.de
+	Description: VereinsApp WordPress Theme
+	Version: 1.0.0
+	Author: Ostfalia Teamprojekt
+	Author URI: https://www.ostfalia.de
+*/
+
+/**
+ * Reset
+ *
+ */
+ .button{
+	background-color: #33CCFF; /* Green */
+    border: none;
+    color: FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	border-radius: 4px;
+	margin:0 auto;
+	width:100%;
+ }
+ 
+ .gallery:hover {
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+ 
+ n_title{
+	 font-size:170%;
+	 font-weight:bold;  
+ }
+ 
+ news{
+	 margin-bottom:30px;
+	 margin-top:30px;
+ }
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/**
+ * Form
+ *
+ */
+
+form {
+
+}
+
+form input {
+}
+
+/**
+ * Header
+ *
+ */
+
+header,
+header .area,
+header .bar {
+	width: 100%;
+}
+
+header .area {
+	padding: 10px 0;
+	background-color: #bbbbbb;
+}
+
+header .area h1 {
+	font-size: 3em;
+	color: #FFFFFF;
+}
+
+header .bar {
+	height: 40px;
+	background-color: #dddddd;
+}
+
+.gallery li{
+	list-style-type: none;
+	font-size: 14px;
+}
+
+
+header.scrolled .bar {
+	position: fixed;
+	top: 0;
+}
+
+/**
+ * Sidebar
+ *
+ */
+
+/* Toggle Sidebar Visibility */
+
+.toggle-sidebar-visibility {
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: #333333;
+	cursor: pointer;
+	transition: left ease-in-out 0.4s;
+}
+
+.toggle-sidebar-visibility.visible {
+	left: 140px;
+}
+
+.toggle-sidebar-visibility .icon,
+.toggle-sidebar-visibility .icon:before,
+.toggle-sidebar-visibility .icon:after {
+	width: 100%;
+	height: 3px;
+	background-color: white;
+}
+
+.toggle-sidebar-visibility .icon {
+	margin: 9px 0;
+	position: relative;
+	transition: background-color ease-in-out 0.2s;
+}
+
+.toggle-sidebar-visibility .icon:before,
+.toggle-sidebar-visibility .icon:after {
+	position: absolute;
+	content: "";
+	transition: top ease-in-out 0.2s, transform ease-in-out 0.2s;
+}
+
+.toggle-sidebar-visibility .icon:before {
+	top: -8px;
+}
+
+.toggle-sidebar-visibility .icon:after {
+	top: 8px;
+}
+
+.toggle-sidebar-visibility.visible .icon {
+	background-color: transparent;
+}
+
+.toggle-sidebar-visibility.visible .icon:before,
+.toggle-sidebar-visibility.visible .icon:after {
+	top: 0;
+}
+
+.toggle-sidebar-visibility.visible .icon:before {
+	transform: rotate(45deg);
+}
+
+.toggle-sidebar-visibility.visible .icon:after {
+	transform: rotate(-45deg);
+}
+
+/* Sidebar */
+
+.sidebar {
+	width: 180px;
+	height: 100%;
+	padding-top: 40px;
+	position: fixed;
+	top: 0;
+	left: -180px;
+	background-color: #333333;
+	overflow: hidden;
+	transition: left ease-in-out 0.4s;
+}
+
+.sidebar.visible {
+	left: 0;
+}
+
+/* Sidebar Main Menu */
+
+.sidebar .nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar .nav ul li {
+	list-style: none;
+	cursor: pointer;
+}
+
+.sidebar .nav ul li a {
+	padding: 10px;
+	padding-left: 40px;
+	display: block;
+	text-decoration: none;
+	color: #FFFFFF;
+	position: relative;
+}
+
+.sidebar .nav ul li a:hover {
+	background-color: #222222;
+}
+
+.sidebar .nav ul li.current_page_item a {
+	background-color: #0073aa;
+}
+
+.sidebar .nav ul li.visible {
+	background-color: #222222;
+}
+
+.sidebar .nav ul li a:before {
+	width: 20px;
+	height: 20px;
+	content: "";
+	position: absolute;
+	left: 10px;
+	background-size: contain;
+}
+
+/* Sidebar Main Menu Icons */
+
+.sidebar .nav ul li.home a:before {
+	background-image: url(images/icons/homeW.svg);
+}
+
+.sidebar .nav ul li.news a:before {
+	background-image: url(images/icons/newsW.svg);
+}
+
+.sidebar .nav ul li.login a:before {
+	background-image: url(images/icons/loginW.svg);
+}
+
+.sidebar .nav ul li.sign a:before {
+	background-image: url(images/icons/signW.svg);
+}
+
+/* Sidebar Sub Menu */
+
+.sidebar .nav ul.sub-menu {
+	height: 0;
+	background-color: #3f3f3f;
+	overflow: hidden;
+}
+
+.sidebar .nav ul.sub-menu li a {
+	padding: 8px 10px;
+	border: none;
+}
+
+.sidebar .nav ul.sub-menu li a:before {
+	display: none;
+}
+
+/**
+ * Content
+ *
+ */
+
+section {
+	padding-top: 25px;
+	padding-bottom: 50px;
+}
+
+section.main.scrolled {
+	margin-top: 45px;
+}
+
+.content {
+	width: 100%;
+	padding: 0 15px;
+}
+.page-newslwtter{
+	width: 80%;
+	margin-top: 10px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 10px;
+}
+/**
+ * Footer
+ *
+ */
+
+footer {
+	width: 100%;
+	padding: 10px 0;
+	background-color: #eeeeee;
+}
+
+.demo_line_01{
+    padding: 0 20px 0;
+    margin: 20px 0;
+    line-height: 1px;
+    border-left: 200px solid #ddd;
+    border-right: 200px solid #ddd;
+    text-align: center;
+}
+
+
+@media(min-width:783px) {
+
+	/**
+	 * Header
+	 *
+	 */
+
+	body.admin-bar header.scrolled .bar {
+		top: 32px;
+	}
+
+
+	/**
+	 * Sidebar
+	 *
+	 */
+
+	body.admin-bar .toggle-sidebar-visibility,
+	body.admin-bar .sidebar{
+		top: 32px;
+	}
+
+	/**
+	 * Content
+	 *
+	 */
+
+	.content {
+		padding: 0 30px;
+	}
+
+	/**
+	 * Footer
+	 *
+	 */
+}
+
+@media(min-width:992px) {
+
+	.container {
+		margin-left: 180px;
+		transition: margin-left ease-in-out 0.4s;
+	}
+
+	/**
+	 * Header
+	 *
+	 */
+
+	/**
+	 * Sidebar
+	 *
+	 */
+
+	.toggle-sidebar-visibility {
+		display: none;
+	}
+
+	.sidebar {
+		left: 0;
+	}
+
+	/**
+	 * Content
+	 *
+	 */
+
+	/**
+	 * Footer
+	 *
+	 */
+}
+
+@media(min-width:1200px) {
+
+	/**
+	 * Header
+	 *
+	 */
+
+	/**
+	 * Content
+	 *
+	 */
+
+	/**
+	 * Footer
+	 *
+	 */
+}
